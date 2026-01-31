@@ -26,7 +26,7 @@ def get_server_date():
 
 # --- [설정] 페이지 설정 ---
 st.set_page_config(
-    page_title="Tivue M v2.6", 
+    page_title="TivueM_v2.6", 
     page_icon="🔒", 
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -87,7 +87,7 @@ def apply_watermark(base_image, watermark_img):
 
 # --- 메인 실행 ---
 def main():
-    st.title("🔒 Tivue M v2.6")
+    st.title("🔒 TivueM_v2.6")
     
     # 워터마크 이미지 로드
     try:
@@ -96,7 +96,7 @@ def main():
         st.warning("⚠️ 서버에 'watermark.png' 파일이 없습니다.")
         watermark_source = None
 
-    uploaded_file = st.file_uploader("보안 문서(.bin)를 선택하세요", type="bin")
+    uploaded_file = st.file_uploader("보안 문서(.bin)를 선택하세요", type=["bin"])
 
     if uploaded_file is not None:
         try:
