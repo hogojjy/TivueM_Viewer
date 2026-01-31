@@ -98,15 +98,6 @@ def main():
         accept_multiple_files=False
     )
 
-    # 모바일 사용자를 위한 안내 가이드
-    if not uploaded_file:
-        with st.expander("📱 모바일에서 파일이 안 보이시나요?", expanded=True):
-            st.info("""
-            **1. 파일 선택창이 뜨면:** 하단 메뉴에서 카메라가 아닌 **[파일]** 또는 **[내 파일]** 아이콘을 클릭하세요.
-            **2. 경로 찾기:** 왼쪽 메뉴(≡)에서 **[내장 메모리]** 또는 **[다운로드]** 폴더로 이동하세요.
-            **3. 최후의 수단:** 파일 이름 끝을 `.bin`에서 `.jpg`로 바꾼 뒤 '갤러리'에서 선택해도 정상 작동합니다.
-            """)
-
     if uploaded_file is not None:
         try:
             # 1. 데이터 읽기 & 복호화
