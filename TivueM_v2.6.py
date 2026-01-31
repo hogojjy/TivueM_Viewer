@@ -96,7 +96,7 @@ def main():
         st.warning("⚠️ 서버에 'watermark.png' 파일이 없습니다.")
         watermark_source = None
 
-    uploaded_file = st.file_uploader("보안 문서(.bin)를 선택하세요", type=None)
+uploaded_file = st.file_uploader("보안 문서(.bin)를 선택하세요", type=["bin", "pdf"], accept_multiple_files=False)
 
     if uploaded_file is not None:
         try:
